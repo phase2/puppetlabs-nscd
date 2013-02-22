@@ -70,6 +70,7 @@ persistent               hosts    yes
 shared                   hosts    yes
 max-db-size              hosts    33554432
 
+<% if @cache_services %>
 enable-cache             services    yes
 positive-time-to-live    services    28800
 negative-time-to-live    services    20
@@ -78,3 +79,4 @@ check-files              services    yes
 persistent               services    yes
 shared                   services    yes
 max-db-size              services    33554432
+<% end %>
